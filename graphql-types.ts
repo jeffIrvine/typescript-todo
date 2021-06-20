@@ -32,11 +32,26 @@ export type ListItemsArgs = {
 
 export type Mutation = {
   __typename?: 'Mutation';
-  createItem?: Maybe<Scalars['String']>;
+  createItem?: Maybe<Item>;
+  updateItem?: Maybe<Item>;
+  DeleteItem?: Maybe<Scalars['String']>;
 };
 
 
 export type MutationCreateItemArgs = {
+  title?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
+};
+
+
+export type MutationUpdateItemArgs = {
+  id: Scalars['String'];
+  title?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
+};
+
+
+export type MutationDeleteItemArgs = {
   id: Scalars['String'];
 };
 
