@@ -17,5 +17,5 @@ type Query {
 type Mutation {
   createItem(title: String, description: String): Item
   updateItem(id: String!, title: String, description: String): Item
-  DeleteItem(id: String!): String
+  deleteItem(id: String!): String
 }
